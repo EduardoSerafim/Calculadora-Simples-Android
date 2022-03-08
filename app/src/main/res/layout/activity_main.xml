@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <!-->VALOR 1</!-->
+    <TextView
+        android:id="@+id/tvValor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Valor 1" />
+
+    <EditText
+        android:id="@+id/etValor1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/darkGray"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center_horizontal|center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvValor1"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <!-->VALOR 2</!-->
+
+    <TextView
+        android:id="@+id/tvValor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor1"
+        android:text="Valor 2" />
+
+    <EditText
+        android:id="@+id/etValor2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/darkGray"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center_horizontal| center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvValor2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <!-->BOTÕES DE OPERAÇÕES</!-->
+
+    <Button
+        android:id="@+id/btAdicao"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/redfiap"
+        app:layout_constraintTop_toBottomOf="@id/etValor2"
+        app:layout_constraintEnd_toStartOf="@id/btSubtracao"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
+        android:text="+"/>
+
+    <Button
+        android:id="@+id/btSubtracao"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/redfiap"
+        app:layout_constraintStart_toEndOf="@id/btAdicao"
+        app:layout_constraintTop_toBottomOf="@id/etValor2"
+        app:layout_constraintEnd_toStartOf="@id/btMultiplicacao"
+        android:textSize="30sp"
+        android:text="-"/>
+
+    <Button
+        android:id="@+id/btMultiplicacao"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/redfiap"
+        app:layout_constraintTop_toBottomOf="@id/etValor2"
+        app:layout_constraintEnd_toStartOf="@id/btDivisao"
+        app:layout_constraintStart_toEndOf="@id/btSubtracao"
+        android:textSize="30sp"
+        android:text="*"/>
+
+    <Button
+        android:id="@+id/btDivisao"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/redfiap"
+        app:layout_constraintStart_toEndOf="@id/btMultiplicacao"
+        app:layout_constraintTop_toBottomOf="@id/etValor2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
+        android:text="/"/>
+
+    <!-->RESULTADO</!-->
+
+    <TextView
+        android:id="@+id/tvLabelResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btAdicao"
+        android:text="Resultado" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/darkGray"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:gravity="center_horizontal| center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelResultado"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
